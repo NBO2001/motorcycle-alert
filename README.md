@@ -127,7 +127,7 @@ make format && make lint && make test
 | `TELEGRAM_API_KEY` | Telegram bot API key | Required |
 | `TELEGRAM_USER_ID` | Your Telegram user ID | Required |
 | `API_BASE_URL` | Base URL for motorcycle API | `https://servidormapa.com` |
-| `OBJECT_ID` | Motorcycle object ID | `99072` |
+| `OBJECT_ID` | Motorcycle object ID | `your_object_id_here` |
 | `API_COOKIE` | Cookie header for API authentication | Required |
 | `API_CSRF_TOKEN` | CSRF token for API requests | Required |
 | `CHECK_INTERVAL` | Check interval in seconds | `60` |
