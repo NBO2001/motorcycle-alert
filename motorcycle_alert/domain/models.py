@@ -16,6 +16,8 @@ class MotorcycleStatus:
     stop_duration: Optional[str] = None
     speed: Optional[str] = None
     additional_sensors: Optional[Dict[str, str]] = None
+    lat: Optional[float] = None
+    lng: Optional[float] = None
 
     def __post_init__(self):
         """Validate motorcycle status data."""
@@ -35,6 +37,7 @@ class MotorcycleStatus:
             and self.blocked == other.blocked
             and self.ignition == other.ignition
         )
+
 
 @dataclass(frozen=True)
 class AlertMessage:
@@ -57,5 +60,6 @@ class AlertMessage:
 - Alimentation: {self.status.alimentation}
 - Blocked: {'Yes' if self.status.blocked else 'No'}
 - Ignition: {self.status.ignition}{sensors_info}
+- Map Location: https://www.google.com/maps?q={self.status.lat},{self.status.lng}
 
 📅 Alert Time: {self.timestamp}"""

@@ -71,6 +71,8 @@ class ApiMotorcycleDataRepository(MotorcycleDataRepository):
                 for k, v in sensors.items()
                 if k not in ["alimentation", "blocked", "ignition"]
             },
+            lat=item_data.get("lat"),
+            lng=item_data.get("lng"),
         )
 
     def _parse_sensors(self, sensors_data: list) -> Dict[str, Any]:
