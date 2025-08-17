@@ -25,6 +25,16 @@ class MotorcycleStatus:
         if not isinstance(self.blocked, bool):
             raise ValueError("Blocked status must be a boolean")
 
+    def __eq__(self, other):
+        """Check equality of two MotorcycleStatus instances."""
+        if not isinstance(other, MotorcycleStatus):
+            return NotImplemented
+        return (
+            self.icon_color == other.icon_color
+            and self.alimentation == other.alimentation
+            and self.blocked == other.blocked
+            and self.ignition == other.ignition
+        )
 
 @dataclass(frozen=True)
 class AlertMessage:
