@@ -61,7 +61,7 @@ TELEGRAM_USER_ID=your_telegram_user_id_here
 
 # API Configuration
 API_BASE_URL=https://servidormapa.com
-OBJECT_ID=99072
+OBJECT_ID=your_object_id_here
 API_COOKIE=your_api_cookie_here
 API_CSRF_TOKEN=your_api_csrf_token_here
 
